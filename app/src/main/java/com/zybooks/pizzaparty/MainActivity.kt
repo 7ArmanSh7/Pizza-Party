@@ -1,12 +1,23 @@
 package com.zybooks.pizzaparty
 
 import android.os.Bundle
+import android.text.Editable
 import android.view.View
 import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+/**
+ * 1. Added string resources
+ * 2. Changed the primary colors
+ * 3. Added dimension resources
+ * 4. Added a Style
+ * 5. Modify the theme
+ * 6. Added a background image
+ * 7. Use the ConstraintLayout
+ * 8. MVC interaction
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var numAttendEditText: EditText
@@ -30,7 +41,7 @@ class MainActivity : AppCompatActivity() {
      * to the totall number of pizza needed.
      * @param View view The associated view
      */
-    fun CALCULATE(view: View) {
+    fun calculate(view: View) {
 
         // Get the text that was typed into the EditText
         val numAttendStr = numAttendEditText.text.toString()

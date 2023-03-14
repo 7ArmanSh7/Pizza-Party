@@ -22,9 +22,10 @@
         android:labelFor="@id/num_attend_edit_text"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        />
 
     <EditText
         android:id="@+id/num_attend_edit_text"
@@ -34,17 +35,17 @@
         android:inputType="number"
         android:ems="5"
         android:importantForAutofill="no"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/num_people"
-        app:layout_constraintLeft_toRightOf="@id/num_people"    />
-
+        app:layout_constraintTop_toBottomOf="@id/num_people"
+        />
+    <!--        app:layout_constraintBaseline_toBaselineOf="@id/num_people"-->
     <TextView
         android:id="@+id/how_hungry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:text="@string/how_hungry"
         android:textSize="@dimen/text_size"
         android:labelFor="@id/hungry_radio_group"
@@ -58,7 +59,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/how_hungry"
         >
@@ -72,6 +73,7 @@
             android:text="@string/medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:checked="true" />
         <RadioButton
             android:id="@+id/ravenous_radio_button"
@@ -87,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:textSize="@dimen/text_size"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hungry_radio_group"
         />
@@ -98,9 +100,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:onClick="CALCULATE"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:onClick="calculate"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/num_pizzas_text_view"
+        style="@style/CalcButton"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
